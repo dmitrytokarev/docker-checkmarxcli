@@ -15,8 +15,8 @@ Builds Docker image which invokes security scripts.
 ### Usage in codefresh
  All ${{var}} variables must be put into Codefresh Build Parameters codefresh.yml
 
- `checkmarx_scan:
+ checkmarx_scan:
    title: static code analysis scan
    image: sctechdev/docker-checkmarxcli:latest
    commands:
-     - /usr/bin/python3 /scripts/checkmarx.py -s {{cmarxDNS}} -u {{cmarxuser}} -p "${{CMPASSWORD}}" -n "${{PROJECTNAME}}" -l GIT -r "${{GITURL}}" -b "refs/heads/${{CF_BRANCH}}"`
+     `- /usr/bin/python3 /scripts/checkmarx.py -s {{cmarxDNS}} -u {{cmarxuser}} -p "${{CMPASSWORD}}" -n "${{PROJECTNAME}}" -l GIT -r "${{GITURL}}" -b "refs/heads/${{CF_BRANCH}}"`
