@@ -19,4 +19,4 @@ Builds Docker image which invokes security scripts.
    title: static code analysis scan
    image: sctechdev/docker-checkmarxcli:latest
    commands:
-     `- /usr/bin/python3 /scripts/checkmarx.py -s {{cmarxDNS}} -u {{cmarxuser}} -p "${{CMPASSWORD}}" -n "${{PROJECTNAME}}" -l GIT -r "${{GITURL}}" -b "refs/heads/${{CF_BRANCH}}"`
+     - /usr/bin/python3 /scripts/checkmarx.py -s {{cmarxDNS}} -u {{cmarxuser}} -p "${{CMPASSWORD}}" -n "${{PROJECTNAME}}" -l GIT -r "${{GITURL}}" -b "refs/heads/${{CF_BRANCH}}"
